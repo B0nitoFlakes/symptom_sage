@@ -21,6 +21,7 @@ sentence-transformers
 #testing
 ragas
 deepeval
+datasets
 
 #frontend
 streamlit

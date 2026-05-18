@@ -2,13 +2,10 @@ import os
 import sys
 from dotenv import load_dotenv
 from openai import OpenAI
-from ragas import evaluate
 from langchain_openai import OpenAIEmbeddings
-from ragas.embeddings import embedding_factory
+from ragas import evaluate
 from ragas.llms import llm_factory
 from ragas.metrics import faithfulness, answer_relevancy
-from ragas.metrics.collections.faithfulness import Faithfulness
-from ragas.metrics.collections.answer_relevancy import AnswerRelevancy
 from datasets import Dataset
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

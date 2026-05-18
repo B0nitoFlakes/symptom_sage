@@ -6,7 +6,8 @@ from qdrant_client import QdrantClient
 load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-qdrant = QdrantClient(host="localhost", port=6333)
+qdrant_host = os.getenv("QDRANT_HOST", "localhost")
+qdrant = QdrantClient(host=qdrant_host, port=6333)
 COLLECTION_NAME="symptom-sage"
 
 def embed_query(query: str):

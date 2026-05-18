@@ -8,7 +8,8 @@ from qdrant_client.models import Distance, VectorParams, PointStruct
 load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-qdrant = QdrantClient(host="localhost", port=6333)
+qdrant_host = os.getenv("QDRANT_HOST", "localhost")
+qdrant = QdrantClient(host=qdrant_host, port=6333)
 
 with open("data/chunks.json", "r") as f:
     chunks = json.load(f)

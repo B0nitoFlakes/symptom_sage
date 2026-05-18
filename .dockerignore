@@ -1,0 +1,6 @@
+SAGEenv/
+.git/
+.deepeval/
+results/
+__pycache__/
+*.pyc

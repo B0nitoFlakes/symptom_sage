@@ -2,3 +2,4 @@ SAGEenv/
 __pycache__/
 *.pyc
 .env
+.deepeval
